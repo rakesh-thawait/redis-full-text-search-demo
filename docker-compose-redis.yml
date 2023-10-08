@@ -1,0 +1,7 @@
+version: '2'
+services:
+  localredisftsdemo:
+    image: "redislabs/redisearch:latest"
+    container_name: localredisftsdemo
+    ports:
+      - "6379:6379"

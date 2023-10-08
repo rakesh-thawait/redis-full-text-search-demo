@@ -1,0 +1,15 @@
+package com.rt.redisfulltextsearchdemo.repo;
+
+import com.rt.redisfulltextsearchdemo.entity.Book;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface BookRepository extends CrudRepository<Book, String> {
+
+    Book findByName(String name);
+
+    Optional<Book> findByIsbn(String isbn);
+}
